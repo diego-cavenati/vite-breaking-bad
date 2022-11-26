@@ -4,8 +4,6 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppMain from './components/AppMain.vue'
 
-import { store as state } from './store'
-
 export default {
   name: "App",
   components: { AppHeader, AppFooter, AppMain }

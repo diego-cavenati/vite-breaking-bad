@@ -1,16 +1,26 @@
 <script>
-import { store as state } from '';
+import { store } from '../store.js'
 export default {
     name: 'FilterCategory',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
 <template>
     <div class="filter container">
-        <select v-model="state.selectCategory" @change="$emit('filterByCategory')">
-            <option value="">Select Category</option>
+        <select v-model="store.selectCategory" @change="$emit('filterByCategory')">
+            <option value="">All</option>
             <option value="Breaking Bad">Breaking Bad</option>
-            <option value="Bette Call Soul">Bette Call Soul</option>
+            <option value="Better Call Saul">Better Call Saul</option>
         </select>
     </div>
 </template>
+
+
+<style lang="scss" scoped>
+
+</style>
