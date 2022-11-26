@@ -8,24 +8,7 @@ import { store as state } from './store'
 
 export default {
   name: "App",
-  data() {
-    return {};
-  },
-  methods: {
-    callApi(url) {
-      axios
-        .get(url)
-        .then(response => {
-          this.state.actors = response.data;
-          this.state.loading = false;
-        })
-        .catch(err);
-    },
-    mounted() {
-      this.callApi("this.state.API_url");
-    }
-  },
-  components: { AppHeader }
+  components: { AppHeader, AppFooter, AppMain }
 }
 </script>
 
